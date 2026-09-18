@@ -10,7 +10,7 @@ public class Task2 {
         int totalHour = scanner.nextInt();
         System.out.println("Enter price per hour:");
         double pricePerHour = scanner.nextDouble();
-        int NumberOfTheDay;
+        int numberOfTheDay;
         double bonus = 1.0;
         boolean isInvalidInput = true;
 
@@ -19,15 +19,16 @@ public class Task2 {
             if(!isInvalidInput){
                 System.out.println("Invalid input. Please enter a number between 1 and 7.");
             }
-            NumberOfTheDay = scanner.nextInt();
+            numberOfTheDay = scanner.nextInt();
             isInvalidInput = false;
-        } while (NumberOfTheDay < 1 || NumberOfTheDay > 7);
+        } while (numberOfTheDay < 1 || numberOfTheDay > 7);
 
-        switch (NumberOfTheDay){
-            case 1,2,3,4,5 -> bonus = 1.0;
-            case 6 -> bonus = 1.2;
-            case 7 -> bonus = 1.5;
-        }
+        bonus = switch (numberOfTheDay){
+            case 1,2,3,4,5 -> 1.0;
+            case 6 -> 1.2;
+            case 7 -> 1.5;
+            default -> 1.0;
+        };
 
         if (totalHour > 40){
             bonus *= 1.5;
