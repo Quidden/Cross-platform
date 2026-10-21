@@ -7,7 +7,7 @@ class main {
     public static void Main(String[] args) {
 
         int lenLine = 0;
-        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/Lab3/input.txt")))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/Lab2/input.txt")))) {
             while ((reader.readLine()) != null) {
                 lenLine++;
             }
@@ -18,7 +18,7 @@ class main {
         int[][] matrix = new int[lenLine][lenLine];
         int rowIndex = 0;
 
-        try (BufferedReader reader = new BufferedReader(new FileReader("src/Lab3/input.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("src/Lab2/input.txt"))) {
             String line;
             while ((line = reader.readLine()) != null) {
 
@@ -56,7 +56,7 @@ class main {
         }
         result.append("Sum of diagonal elements: ").append(sumOfDiagonal);
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/Lab3/output.txt"))) {
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("src/Lab2/output.txt"))) {
             writer.write(result.toString());
         } catch (IOException e) {
             e.printStackTrace();

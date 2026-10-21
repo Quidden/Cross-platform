@@ -1,0 +1,3 @@
+Circle;Circle;Red;15.3
+Rectangle;Rectangle;Blue;10.4;2.4
+Triangle;Triangle;Green;10.2;4.5
